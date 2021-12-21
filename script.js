@@ -59,15 +59,44 @@ function resetGame() {
 }
 
 btnStart.addEventListener("click", function() {
+    start();
+});
+startWord.addEventListener("keypress", function(e) {
+    if (e.keyCode == 13) {
+        start();
+    } 
+});
+
+btnEnd.addEventListener("click", function() {
+    end();
+});
+
+endWord.addEventListener("keypress", function(e) {
+    if (e.keyCode == 13) {
+        end();
+    } 
+});
+
+btnGuess.addEventListener("click", function() { 
+    addWord();
+});
+
+guess.addEventListener("keypress", function(e) {
+    if (e.keyCode == 13) {
+        addWord();
+    } 
+});
+
+function start() {
     words.push(startWord.value);
     inputStart.innerHTML = `${startWord.value}`;    
     startWord.classList.add("hide");
     btnStart.classList.add("hide");
     endWord.classList.remove("hide");
     btnEnd.classList.remove("hide");
-});
+}
 
-btnEnd.addEventListener("click", function() {
+function end() {
     if (startWord.value.length === endWord.value.length) {
         inputEnd.innerHTML = `${endWord.value}`;
         endWord.classList.add("hide");
@@ -78,16 +107,16 @@ btnEnd.addEventListener("click", function() {
     } else {
         score.innerHTML = "YOU EVEN ENTERED THE START WORD YET YOU GET THE LENGTH WRONG?! GOD DAMNIT";
     };
-});
+}
 
-btnGuess.addEventListener("click", function() { 
+function addWord() {
     if (guess.value.length != startWord.value.length) {
         score.innerHTML = "WRONG LENGTH, HELLO?!";
     } else {
         wordChecker();
         guess.value = "";
     }
-});
+}
 
 function wordChecker() {
     let cheatCheck = 0;
