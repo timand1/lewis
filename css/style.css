@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #181818;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 4rem;
+    color:rgb(58, 139, 50);
+}
+
+h2 {
+    color:rgb(207, 207, 207);
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.btn-rock, .btn-paper, .btn-scissor, .btn-ai {
+    margin: auto 0;
+    display: block;
+}
+
+/* Nav Menu */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: steelblue;
+    backdrop-filter: blur(4px);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;   
+}
+
+.link {
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    min-height: 500px;
+    margin: 5rem 0; 
+    border: 1px solid rgb(165, 165, 165);
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    background:rgb(85, 90, 94);
+}
+
+.card:last-child {
+    justify-content: space-evenly;
+}
+
+.card:last-child h2, .card:last-child .btn {
+    margin-bottom: auto;
+}
+
+.card h1 {
+    margin: auto 0;
+}
+
+.card:nth-child(2) {
+    border-left: 1px solid rgb(165, 165, 165);
+    border-right: 1px solid rgb(165, 165, 165);
+}
+
+.msg-play {
+    color:rgb(211, 108, 23);
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    animation: win 2s linear infinite;
+    z-index: 10;
+    
+}
+
+@keyframes win {
+    0%, 50%, 100% {
+        top: 50%;
+    }
+
+    30% {
+        top: 40%;
+    }
+    
+    60% {
+        top: 40%;
+    }
+
+}
+
+.headline {
+    margin-bottom: 6rem;
+}
+
+.msg-current {
+    font-size: 2rem;
+    color: rgb(211, 108, 23);
+}
+
+.btn {
+    border: 2px solid #181818;
+    border-radius: 10px;    
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn:hover {
+    background-color: rgb(171, 205, 236)
+}
+
+
+.btn:active {
+    background: rgb(79, 116, 151);
+}
+
+.btn-restart {
+    display: block;
+}
+
+
+.btn-hide {
+    display: none;
+}
+
+/* RPS */
+.container-rps {
+    margin-top: 0;
+}
+
+.card-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    border: 3px solid rgb(88, 141, 190);
+}
+
+.card-header h2 {
+    margin: 2rem 0;
+    padding-left: 2rem;
+    flex: 1;
+}
+
+.msg-winner {
+    flex: 2;
+}
+
+.card-rps {
+    justify-content: space-between;
+}
+
+
+
+.btn-rock {
+    padding: 2rem;
+    background-image: url("/assets/rock.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-paper {
+    padding: 2rem;
+    background-image: url("/assets/paper.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-scissor {
+    padding: 2rem;
+    background-image: url("/assets/scissors.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.msg-score {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+
+.choice {
+    width: 100%;
+    display: flex;
+    margin-bottom: auto;
+    justify-content: space-evenly;
+}
+
+h3 {
+    font-size: 2.2rem;
+
+}
+
+.input-word {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.btn-reset {
+    margin-top: 4rem;
+    align-self: flex-start;
+}
+
+.main {
+    margin-top: 8rem;
+}
+
+.input-text, .btn {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.score {
+    color: tomato;
+}
+
+.word--guess {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pseudo Games</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <main class="main">
+            <h2>Entered words : <span class="word--guess "></span></h2>
+            <section class="cards">
+                <article class="card"><h3>Start word</h3><h2 class="word--start"></h2></article>
+                <article class="card"><h3>Last Entry</h3><h2 class="last-guess"></h2></article>
+                <article class="card"><h3>End Word</h3><h2 class="word--end"></h2></article>
+                <form class="input-word">
+                    <article>
+                        <input type="text" name="startword" id="startword">
+                        <input type="button" class="btn btn-start" value="Start word">
+                    </article>
+                    <article>
+                        <input type="text" name="endword" class="hide input-text" id="endword">
+                        <input type="button" class="btn btn-end hide" value="End word">
+                    </article>
+                    <article>
+                        <input type="text" name="guess" class="hide" id="guess">
+                        <input type="button" class="btn btn-guess hide" value="Guess">
+                    </article>
+                    <button class="btn btn-reset">Reset</button>
+                </form>
+            </section>
+            <section>
+                <h2 class="score"></h2>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
