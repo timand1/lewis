@@ -14,8 +14,29 @@ let inputEnd = document.querySelector(".word--end");
 let words = [];
 let lastGuess = document.querySelector(".last-guess");
 
-reset.addEventListener("click", function() {
-    resetGame();
+startWord.addEventListener("keypress", function(e) {
+    if (e.keyCode == 13) {
+        e.preventDefault();
+        return false;
+    }
+})
+
+endWord.addEventListener("keypress", function(e) {
+    if (e.keyCode == 13) {
+        e.preventDefault();
+        return false;
+    }
+})
+
+guess.addEventListener("keypress", function(e) {
+    if (e.keyCode == 13) {
+        e.preventDefault();
+        return false;
+    }
+})
+
+reset.addEventListener("click", function(e) {
+        resetGame();
 })
 
 function resetGame() {
