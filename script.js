@@ -134,7 +134,7 @@ function wordChecker() {
             attempts++;
             score.innerHTML = `WOOPWOOP! You got the word in ${attempts} tries you beast!`;
             score.style.color = "green";
-        } else if (guess.value === endWord.value && attempts > 10) {
+        } else if (guess.value === endWord.value && attempts > 50) {
             attempts++;
             score.innerHTML = `You got the word in ${attempts} tries. Have you tried using your brain? :)`;
             score.style.color = "green";
