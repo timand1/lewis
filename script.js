@@ -105,7 +105,7 @@ function end() {
         btnGuess.classList.remove("hide");
         score.innerHTML = "";
     } else {
-        score.innerHTML = "YOU EVEN ENTERED THE START WORD YET YOU GET THE LENGTH WRONG?! GOD DAMNIT";
+        score.innerHTML = "..dude.. same length";
     };
 }
 

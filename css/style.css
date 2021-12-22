@@ -61,6 +61,8 @@ h2 {
 
 .cards {
     display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .card {
@@ -69,11 +71,25 @@ h2 {
     flex-direction: column;
     align-items: center;    
     background:rgb(85, 90, 94);
+    min-height: 110px;
+}
+
+.card:first-child {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.card:nth-child(3) {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 .card:last-child {
     justify-content: space-evenly;
 }
+
+
+
 
 .card:last-child h2, .card:last-child .btn {
     margin-bottom: auto;
@@ -84,8 +100,8 @@ h2 {
 }
 
 .card:nth-child(2) {
-    border-left: 1px solid rgb(165, 165, 165);
-    border-right: 1px solid rgb(165, 165, 165);
+    border-top: 3px solid rgb(165, 165, 165);
+    border-bottom: 3px solid rgb(165, 165, 165);
 }
 
 .msg-play {
@@ -128,6 +144,7 @@ h2 {
     font-size: 1rem;
     font-weight: 700;
     padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
 }
 
 .btn:hover {
@@ -213,6 +230,7 @@ h2 {
 
 h3 {
     font-size: 2.2rem;
+    margin: 0;
 
 }
 
@@ -223,12 +241,12 @@ h3 {
 }
 
 .btn-reset {
-    margin-top: 4rem;
     align-self: flex-start;
 }
 
 .main {
     margin-top: 8rem;
+    margin: 8rem 1rem 0 1rem;
 }
 
 .input-text, .btn {
@@ -246,4 +264,8 @@ h3 {
 .word--guess {
     max-width: 100%;
     overflow-wrap: break-word;
+}
+
+form {
+    margin-top: 2rem;
 }
